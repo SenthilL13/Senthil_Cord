@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Contact Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated background effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #28a745 0%, #007bff 100%);
+            opacity: 0.1;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .contact-card {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.05);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            transition: all 0.3s ease-in-out;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            backdrop-filter: blur(5px);
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px) rotate(8deg);
+            background: #28a745;
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #20c997, #28a745);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        h2 {
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffffff, #28a745);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+        }
+
+        /* Floating animation for card */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .contact-card {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-card">
+            <img src="BN.png" alt="Profile Picture" class="profile-picture mx-auto d-block">
+            <h2 class="text-center mb-4">Senthilnayagan S</h2>
+            <p class="text-center mb-3">Web Developer | Java | Python |<br> Database Engineer</p>
+            <div class="social-icons">
+                <a href="https://wa.me/9345222105" target="_blank" title="WhatsApp" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/p/CYbGIrHsJky/?utm_source=qr&igsh=MWFzdzNlbWZrM2l2YQ%3D%3D" target="_blank" title="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100093197073366&mibextid=ZbWKwL" target="_blank" title="Facebook" class="facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/senthil-nayagan-976b58277/" target="_blank" title="LinkedIn" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/SenthilL13" target="_blank" title="GitHub" class="github"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/SSenthilNa18305?t=8YdG052AzDx1qwCqithnDg&s=08" target="_blank" title="Twitter" class="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://senthil-port.netlify.app/" target="_blank" title="Portfolio" class="portfolio"><i class="fas fa-briefcase"></i></a>
+            </div>
+            <div class="mt-4">
+                <button class="btn btn-primary w-100" id="shareButton">Share My Contact</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Enhanced share button functionality
+        document.getElementById('shareButton').addEventListener('click', function() {
+            const shareUrl = window.location.href;
+            const tempInput = document.createElement('input');
+            document.body.appendChild(tempInput);
+            tempInput.value = shareUrl;
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            
+            // Create and show a custom toast notification
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(40, 167, 69, 0.9);
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 50px;
+                font-weight: 500;
+                z-index: 1000;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            `;
+            toast.textContent = '?? Link copied to clipboard!';
+            document.body.appendChild(toast);
+            
+            // Show and hide toast with animation
+            setTimeout(() => toast.style.opacity = '1', 100);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Senthilnayagan - Web Developer',
+                    text: 'Check out my professional profile and connect with me!',
+                    url: shareUrl
+                })
+                .then(() => console.log('Shared successfully'))
+                .catch((error) => console.log('Error sharing:', error));
+            }
+        });
+
+        // Enhanced hover effects for social icons
+        const socialIcons = document.querySelectorAll('.social-icons a');
+        socialIcons.forEach(icon => {
+            icon.addEventListener('mouseenter', () => {
+                icon.style.transform = 'translateY(-5px) rotate(8deg)';
+            });
+            icon.addEventListener('mouseleave', () => {
+                icon.style.transform = 'translateY(0) rotate(0)';
+            });
+        });
+    </script>
+</body>
+</html>
